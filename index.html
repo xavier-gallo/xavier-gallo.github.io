@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Computer Engineering student</title>
+  <meta name="description" content="Fourth-year Computer Engineering student looking for a software engineering internship or junior developer role. Projects in Java, C#, C, Python and the web.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4fd8'/%3E%3Cpath d='M12 11l-5 5 5 5M20 11l5 5-5 5' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap bar">
+    <a class="brand" href="#top" data-p="name">Your Name</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme" type="button" aria-pressed="false">Dark mode</button>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="name">
+      <h1 id="name" data-p="name">Your Name</h1>
+      <p class="role">Computer Engineering student, fourth year. Looking for a software engineering internship or junior developer role.</p>
+      <p class="lead">I build coursework projects in Java, C#, C, Python and the web. Each project below says what it does, what it is built with and where its limits are.</p>
+      <p class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Contact me</a>
+        <a class="btn" data-link="github" href="#contact">GitHub</a>
+        <a class="btn" data-link="cv" href="#contact">CV (PDF)</a>
+      </p>
+    </section>
+
+    <section class="wrap split" id="about" aria-labelledby="about-t">
+      <h2 id="about-t">About</h2>
+      <div>
+        <p>I am in the fourth year of my Computer Engineering degree. My coursework so far includes distributed applications and web back-ends in Java, a desktop application with a SQL Server database in C#, algorithms and data structures in C, and a neural-network classifier in Python.</p>
+        <p>I am looking for an internship or junior role where I can work on real code with a team, learn from code review and keep improving. Most projects below come from university courses and were done in pairs or small groups, so they are labelled as academic work.</p>
+      </div>
+    </section>
+
+    <section class="wrap split" id="skills" aria-labelledby="skills-t">
+      <h2 id="skills-t">Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>Java, C, C#, Python, PHP, SQL, JavaScript, HTML, CSS</dd>
+        <dt>Web and back-end</dt>
+        <dd>Servlets, JSP, Jersey (JAX-RS), REST, Tailwind CSS</dd>
+        <dt>Data and machine learning</dt>
+        <dd>SQL Server, MySQL, TensorFlow/Keras, scikit-learn, NumPy, Matplotlib</dd>
+        <dt>Tools</dt>
+        <dd>Eclipse, Visual Studio, Code::Blocks, Jupyter, Google Colab</dd>
+        <dt>Concepts</dt>
+        <dd>Multithreading, sockets and RMI, REST APIs, layered design, algorithm analysis, relational modelling</dd>
+      </dl>
+    </section>
+
+    <section class="wrap split" id="projects" aria-labelledby="projects-t">
+      <h2 id="projects-t">Projects</h2>
+      <div>
+        <noscript><p>Enable JavaScript to see the project list, or visit my GitHub profile.</p></noscript>
+        <ul class="projects" id="project-list"></ul>
+      </div>
+    </section>
+
+    <section class="wrap split" id="education" aria-labelledby="edu-t">
+      <h2 id="edu-t">Education</h2>
+      <div>
+        <p><strong>Degree in Computer Engineering</strong> (<span lang="es">Grado en Ingeniería Informática</span>), currently in the fourth year.</p>
+        <p data-show="university"><span data-p="university"></span></p>
+        <p data-show="graduation">Expected graduation: <span data-p="graduation"></span></p>
+        <p>Relevant courses: Algorithmics, Distributed Applications, Web Programming, Advanced Visual Programming, Information Management Systems, Intelligent Systems, IT Project Management.</p>
+      </div>
+    </section>
+
+    <section class="wrap split" id="contact" aria-labelledby="contact-t">
+      <h2 id="contact-t">Contact</h2>
+      <div>
+        <p>I am open to internships and junior roles. The quickest way to reach me:</p>
+        <p class="cta">
+          <a class="btn primary" data-link="email" data-p="email" href="#contact"></a>
+          <a class="btn" data-link="linkedin" href="#contact">LinkedIn</a>
+          <a class="btn" data-link="github" href="#contact">GitHub</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© <span id="year"></span> <span data-p="name">Your Name</span>. Plain HTML, CSS and JavaScript. No trackers, no cookies.</p>
+  </footer>
+</body>
+</html>
