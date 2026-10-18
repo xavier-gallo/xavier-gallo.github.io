@@ -1,0 +1,12 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+
+# Never commit secrets or local configuration
+.env
+*.pem
+
+# Only needed if you add tooling later
+node_modules/
+*.log
