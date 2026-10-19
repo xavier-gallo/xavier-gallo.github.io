@@ -15,11 +15,11 @@ Then visit http://localhost:8000.
 ## Customize
 
 All personal content lives in the editable block at the top of `assets/main.js`:
-`PROFILE` (name and links) and `PROJECTS` (one entry per project). Empty fields are hidden automatically.
+`PROFILE` (name and links), `PROJECTS` (featured projects) and `MORE` (compact list). Empty fields are hidden automatically.
 
 ## Deploy
 
-Repository named `USERNAME.github.io`, then Settings > Pages > Source: **Deploy from a branch** > `main` / `(root)`.
+Repository named `xavier-gallo.github.io`, then Settings > Pages > Source: **Deploy from a branch** > `main` / `(root)`.
 
 ## Structure
 
