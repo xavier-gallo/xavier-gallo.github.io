@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+.vscode/
+*.exe
+*.dll
+*.class
+*.o
+*.pdb
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Casotic - Directorio de Empresas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "secondary": "#4A5568",
+                        "background-light": "#F2F4F5",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex items-center justify-between border-b border-primary/10 px-6 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-primary cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-3xl">dataset</span>
+                <h2 class="text-xl font-bold">Casotic</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+                <a class="hover:text-primary transition-colors text-sm font-medium" href="empresas.html">Empresas</a>
+                <a class="hover:text-primary transition-colors text-sm font-medium" href="marketplace.html">Marketplace</a>
+                <a class="hover:text-primary transition-colors text-sm font-medium" href="noticias.html">Noticias</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <label class="hidden sm:flex flex-col min-w-40 h-10 max-w-64">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-primary/5 dark:bg-primary/20 border border-primary/10">
+                    <div class="text-primary flex items-center justify-center pl-4">
+                        <span class="material-symbols-outlined text-xl">search</span>
+                    </div>
+                    <input id="search-company" class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 placeholder:text-primary/50 text-sm font-normal px-3" placeholder="Buscar empresas..."/>
+                </div>
+            </label>
+            <div id="auth-buttons"></div>
+        </div>
+    </header>
+
+    <main class="flex-1 w-full max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10 text-center">
+            <h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-4">Directorio de Empresas Tecnológicas</h1>
+            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Conecta con startups disruptivas y líderes de la industria. Explora nuestro catálogo de empresas validadas.</p>
+        </div>
+
+        <div id="companies-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cargado por JS -->
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 text-center text-slate-500 border-t border-primary/10">
+        <p>© 2024 Casotic Intelligence. All rights reserved.</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCompanies();
+            
+            document.getElementById('search-company').addEventListener('input', renderCompanies);
+        });
+
+        function renderCompanies() {
+            const query = document.getElementById('search-company').value.toLowerCase();
+            const grid = document.getElementById('companies-grid');
+            grid.innerHTML = '';
+
+            const companies = DB.getTable('companies').filter(c => 
+                c.validated && 
+                (c.name.toLowerCase().includes(query) || c.category.toLowerCase().includes(query) || c.location.toLowerCase().includes(query))
+            );
+
+            if (companies.length === 0) {
+                grid.innerHTML = '<p class="col-span-full text-center text-slate-500 py-10">No se encontraron empresas validadas que coincidan con la búsqueda.</p>';
+                return;
+            }
+
+            companies.forEach(company => {
+                grid.innerHTML += `
+                <div class="bg-white dark:bg-slate-900 border border-primary/10 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col h-full" onclick="window.location.href='perfil_empresa.html?id=${company.id}'">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="size-16 rounded-xl bg-primary/5 p-3 flex items-center justify-center border border-primary/10">
+                            ${company.logo ? `<img src="${company.logo}" alt="Logo" class="w-full h-full object-contain">` : `<span class="material-symbols-outlined text-primary text-3xl">domain</span>`}
+                        </div>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">${company.category}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">${company.name}</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">${company.description}</p>
+                    
+                    <div class="flex items-center gap-4 text-xs text-slate-500 mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">location_on</span>
+                            <span>${company.location || 'N/A'}</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+                            <span>${company.stage}</span>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Login - Casotic</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "secondary": "#4A5568",
+                        "accent": "#AD8B73",
+                        "background-light": "#F2F4F5",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+        <div class="p-8">
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center size-12 rounded-xl bg-primary text-white mb-4">
+                    <span class="material-symbols-outlined text-3xl">dataset</span>
+                </div>
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Welcome Back</h2>
+                <p class="text-secondary mt-2 text-sm">Enter your credentials to access your account</p>
+            </div>
+            <!-- Login Form -->
+            <form id="login-form" onsubmit="handleLogin(event)" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" data-i18n="email">Email Address</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" data-i18n="password">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" required>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <span data-i18n="login">Sign In</span> <span class="material-symbols-outlined text-sm">login</span>
+                </button>
+                <div class="mt-4 text-center text-sm text-slate-600 dark:text-slate-400">
+                    <span data-i18n="no_account">Don't have an account?</span> <a href="#" onclick="toggleForms()" class="text-primary font-bold hover:underline" data-i18n="register">Sign up</a>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" onsubmit="handleRegister(event)" class="space-y-4 hidden">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Tipo de Cuenta</label>
+                    <select id="reg-role" onchange="toggleCompanyFields()" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors">
+                        <option value="user">Usuario (Cliente/Inversor)</option>
+                        <option value="company">Empresa Tecnológica</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="reg-name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" data-i18n="name">Full Name</label>
+                    <input type="text" id="reg-name" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" required>
+                </div>
+                <div>
+                    <label for="reg-email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" data-i18n="email">Email Address</label>
+                    <input type="email" id="reg-email" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" required>
+                </div>
+                <div>
+                    <label for="reg-password" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" data-i18n="password">Password</label>
+                    <input type="password" id="reg-password" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" required>
+                </div>
+                <div>
+                    <label for="reg-dni" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">DNI / CIF</label>
+                    <input type="text" id="reg-dni" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="[REDACTED]" required>
+                </div>
+
+                <div id="company-fields" class="hidden space-y-4 border-t border-slate-200 dark:border-slate-700 pt-4 mt-4">
+                    <h3 class="font-bold text-sm text-primary">Datos de Empresa</h3>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Nombre de la Empresa</label>
+                        <input type="text" id="reg-company-name" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Categoría</label>
+                            <input type="text" id="reg-category" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Ej. Biotech">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Ubicación</label>
+                            <input type="text" id="reg-location" class="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="Ciudad, País">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <span data-i18n="register">Sign Up</span> <span class="material-symbols-outlined text-sm">person_add</span>
+                </button>
+                <div class="mt-4 text-center text-sm text-slate-600 dark:text-slate-400">
+                    <a href="#" onclick="toggleForms()" class="text-primary font-bold hover:underline" data-i18n="login">Back to Login</a>
+                </div>
+            </form>
+            <div class="mt-6 text-center text-sm text-slate-600 dark:text-slate-400">
+                <a href="index.html" class="hover:underline flex items-center justify-center gap-1"><span class="material-symbols-outlined text-sm">arrow_back</span> Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        function toggleForms() {
+            document.getElementById('login-form').classList.toggle('hidden');
+            document.getElementById('register-form').classList.toggle('hidden');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const success = Auth.login(document.getElementById('email').value, document.getElementById('password').value);
+            if (success) {
+                const user = Auth.getUser();
+                window.location.href = user.role === 'admin' ? 'panel_administrativo.html' : 'index.html';
+            } else {
+                alert('Credenciales incorrectas');
+            }
+        }
+
+        function toggleCompanyFields() {
+            const role = document.getElementById('reg-role').value;
+            const companyFields = document.getElementById('company-fields');
+            if (role === 'company') {
+                companyFields.classList.remove('hidden');
+                document.getElementById('reg-company-name').required = true;
+            } else {
+                companyFields.classList.add('hidden');
+                document.getElementById('reg-company-name').required = false;
+            }
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const role = document.getElementById('reg-role').value;
+            
+            const userData = {
+                name: document.getElementById('reg-name').value,
+                email: document.getElementById('reg-email').value,
+                password: document.getElementById('reg-password').value,
+                dni: document.getElementById('reg-dni').value,
+                role: role
+            };
+
+            if (role === 'company') {
+                userData.companyName = document.getElementById('reg-company-name').value;
+                userData.category = document.getElementById('reg-category').value;
+                userData.location = document.getElementById('reg-location').value;
+            }
+            
+            const result = Auth.register(userData);
+            
+            if (result.success) {
+                alert('Registro exitoso. Tu cuenta está pendiente de validación por un Administrador.');
+                window.location.href = 'index.html';
+            } else {
+                alert(result.message);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

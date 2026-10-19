@@ -1,0 +1,335 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 18px;
+}
+header h1{
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+
+}
+#logo {
+    height: 80px;
+    width: auto;
+    border-radius: 10px;
+}
+
+nav {
+    border-bottom: 1px solid grey;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content:space-around;
+    gap: 30px;
+    list-style: none;
+    padding: 15px 0;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li {
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+main {
+    flex-grow: 1;
+}
+
+#pilotos {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+#pilotos section {
+    text-align: center;
+}
+#pilotos img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#redbull {
+    background-image: url("../imagenes/redbull.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    margin: 20px 0;
+}
+#calendario {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 120px;
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.calendar li.day-name {
+    background-color: #111;
+    color: #fff;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+}
+
+.calendar li.gp {
+    background-color: #e10600;
+    color: #fff;
+    border: none;
+}
+
+.calendar li span {
+    margin-top: 15px;
+    font-weight: bold;
+}
+input {
+    border-radius: 20px;
+    border: 1px solid grey;
+    padding: 10px 15px;
+    outline: none;
+}
+
+button {
+    border-radius: 25px;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.eliminar {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+#buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+#buscar input {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+#buscar input:focus {
+    border-color: black;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#buscar button {
+    border: none;
+    background: black;
+    color: white;
+}
+
+#buscar button:hover {
+    background: #e10600;
+    opacity: 1;
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+
+#productos section {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#productos section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+#productos section img {
+    order: -1;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+
+#productos section h1, 
+#productos section h2, 
+#productos section h3 {
+    order: 1;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+#productos section p {
+    order: 2;
+    font-size: 18px;
+    color: #e10600;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+#productos section button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#productos section button:first-of-type {
+    order: 3;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+
+#productos section button:first-of-type:hover {
+    background-color: #f1f1f1;
+}
+
+#productos section button:last-of-type {
+    order: 4;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    margin-bottom: 25px;
+}
+
+#productos section button:last-of-type:hover {
+    background-color: #e10600;
+    border-color: #e10600;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid black;
+    background-color: white;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+table{
+    border: 1px solid black;
+    width: 80%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td{
+    padding: 10px;
+}
+#cliente{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+h2{
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+h3{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}

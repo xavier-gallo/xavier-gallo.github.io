@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[PlacasBase] ([Id], [nombre], [categoria], [precio]) VALUES (1, N'ASUS TUF B550M      ', N'mATX                ', 110)
+INSERT INTO [dbo].[PlacasBase] ([Id], [nombre], [categoria], [precio]) VALUES (2, N'MSI B450 Tomahawk   ', N'ATX                 ', 100)
+INSERT INTO [dbo].[PlacasBase] ([Id], [nombre], [categoria], [precio]) VALUES (3, N'Gigabyte B660M      ', N'mATX                ', 120)
+INSERT INTO [dbo].[PlacasBase] ([Id], [nombre], [categoria], [precio]) VALUES (4, N'ASRock X570 Phantom ', N'ATX                 ', 150)
+INSERT INTO [dbo].[PlacasBase] ([Id], [nombre], [categoria], [precio]) VALUES (5, N'Biostar B365        ', N'mATX                ', 85)

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Casotic - Noticias</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "secondary": "#4A5568",
+                        "background-light": "#F2F4F5",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex items-center justify-between border-b border-primary/10 px-6 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-primary cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-3xl">dataset</span>
+                <h2 class="text-xl font-bold">Casotic</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+                <a class="hover:text-primary transition-colors text-sm font-medium" href="empresas.html">Empresas</a>
+                <a class="hover:text-primary transition-colors text-sm font-medium" href="marketplace.html">Marketplace</a>
+                <a class="hover:text-primary transition-colors text-sm font-medium font-bold text-primary" href="noticias.html">Noticias</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <div id="auth-buttons"></div>
+        </div>
+    </header>
+
+    <main class="flex-1 w-full max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-10">
+            <h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-4">Ãšltimas Noticias</h1>
+            <p class="text-slate-600 dark:text-slate-400 max-w-2xl">Mantente al dÃ­a con los avances tecnolÃ³gicos y las inversiones de nuestras empresas.</p>
+        </div>
+
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- DinÃ¡mico -->
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 text-center text-slate-500 border-t border-primary/10">
+        <p>Â© 2024 Casotic Intelligence. All rights reserved.</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const noticias = DB.getTable('noticias');
+            const grid = document.getElementById('news-grid');
+            
+            noticias.forEach(n => {
+                grid.innerHTML += `
+                <article class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-primary/10 hover:shadow-lg transition-shadow">
+                    <img src="${n.image}" alt="${n.title}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">${n.date}</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3 leading-tight">${n.title}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">${n.summary}</p>
+                        <button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="mt-4 text-primary font-bold text-sm hover:underline flex items-center gap-1">Leer mÃ¡s <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+                    </div>
+                </article>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>
+

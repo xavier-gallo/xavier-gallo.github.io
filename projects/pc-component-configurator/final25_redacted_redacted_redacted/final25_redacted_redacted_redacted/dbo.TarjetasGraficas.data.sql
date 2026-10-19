@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[TarjetasGraficas] ([id], [nombre], [gb], [precio]) VALUES (1, N'NVIDIA GTX 1650     ', 4, 180)
+INSERT INTO [dbo].[TarjetasGraficas] ([id], [nombre], [gb], [precio]) VALUES (2, N'NVIDIA RTX 3060 Ti  ', 8, 400)
+INSERT INTO [dbo].[TarjetasGraficas] ([id], [nombre], [gb], [precio]) VALUES (3, N'AMD RX 580          ', 8, 190)
+INSERT INTO [dbo].[TarjetasGraficas] ([id], [nombre], [gb], [precio]) VALUES (4, N'NVIDIA RTX 3070     ', 8, 500)
+INSERT INTO [dbo].[TarjetasGraficas] ([id], [nombre], [gb], [precio]) VALUES (5, N'AMD RX 6700 XT      ', 12, 470)

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Manual de Usuario Detallado - Casotic</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "secondary": "#4A5568",
+                        "background-light": "#F2F4F5",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+    <header class="flex items-center justify-between border-b border-primary/10 px-6 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+        <div class="flex items-center gap-4 text-primary cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined text-3xl">dataset</span>
+            <h2 class="text-xl font-bold">Casotic</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="empresas.html">Empresas</a>
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="marketplace.html">Marketplace</a>
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="noticias.html">Noticias</a>
+        </nav>
+        <div id="auth-buttons"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto w-full p-8">
+        <div class="mb-12">
+            <h1 class="text-4xl font-black tracking-tight mb-4">Manual de Usuario Detallado</h1>
+            <p class="text-slate-600 dark:text-slate-400">Guía completa paso a paso para utilizar todas las funciones de la plataforma de innovación tecnológica CASOTIC.</p>
+        </div>
+        
+        <div class="space-y-8">
+            <!-- Sección 1: Registro -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">person_add</span> 1. Registro y Tipos de Cuenta</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-bold mb-2">Creación de cuenta</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-3">Para participar en la plataforma, dirígete al botón <strong>"Login"</strong> en la cabecera y luego pulsa en <strong>"Sign up"</strong> (Registrarse).</p>
+                        <p class="text-slate-600 dark:text-slate-400">Al registrarte, encontrarás un desplegable llamado <strong>"Tipo de Cuenta"</strong>. Es crucial elegir la opción correcta:</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <h4 class="font-bold flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-sm">person</span> Usuario (Cliente/Inversor)</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Ideal para inversores o personas que solo desean visualizar ofertas y contactar. Solo se requiere Nombre Completo, Email, Contraseña y <strong>DNI</strong>.</p>
+                        </div>
+                        <div class="p-4 bg-primary/5 rounded-xl border border-primary/20">
+                            <h4 class="font-bold text-primary flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-sm">domain</span> Empresa Tecnológica</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Despliega campos adicionales obligatorios: <strong>Nombre de la empresa, CIF, Categoría y Ubicación</strong>. Esta cuenta permite publicar en el Marketplace y tener un perfil público.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-200 rounded-xl text-sm border border-amber-200 dark:border-amber-800/30">
+                        <span class="font-bold">⚠️ Nota sobre Validaciones:</span> Al registrarte, tu cuenta (ya sea de usuario o empresa) quedará en estado <strong>Pendiente</strong>. No podrás operar completamente en el Marketplace hasta que un Administrador apruebe tu perfil desde su panel de control.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 2: Directorio y Perfiles -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">corporate_fare</span> 2. Directorio de Empresas y Perfiles</h2>
+                
+                <p class="text-slate-600 dark:text-slate-400 mb-4">La sección <strong>"Empresas"</strong> en el menú superior te lleva al directorio oficial de CASOTIC. Aquí solo aparecen empresas que han sido previamente validadas por el administrador.</p>
+                
+                <ul class="list-disc pl-6 space-y-3 text-slate-600 dark:text-slate-400 mb-6">
+                    <li>Puedes usar la <strong>barra de búsqueda</strong> superior para filtrar por nombre, categoría (ej. Biotech, CleanTech) o ubicación (ej. Madrid).</li>
+                    <li>Haciendo clic en la tarjeta de una empresa accederás a su <strong>Perfil Público</strong>.</li>
+                    <li>En el perfil público se detallan sus tecnologías y se incluye un <strong>Canal Corporativo de Vídeo</strong> integrado para visualizar presentaciones multimedia.</li>
+                </ul>
+            </section>
+
+            <!-- Sección 3: Marketplace y Empleo -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">storefront</span> 3. Marketplace y Módulo de Empleo</h2>
+                
+                <p class="text-slate-600 dark:text-slate-400 mb-4">El corazón de CASOTIC es su Marketplace, dividido en tres grandes pestañas:</p>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-green-500 mt-1">lightbulb</span>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Tech Offers (Ofertas Tecnológicas):</strong> Patentes, productos o servicios que las empresas ponen a disposición del mercado.
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-amber-500 mt-1">search_insights</span>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Tech Demands (Demandas):</strong> Solicitudes de tecnología específica que una empresa necesita para resolver un problema.
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-blue-500 mt-1">work</span>
+                        <div>
+                            <strong class="text-slate-900 dark:text-white">Empleo:</strong> Ofertas de trabajo del sector tecnológico publicadas por las empresas (Senior IoT Engineer, Machine Learning Architect, etc.).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl">
+                    <h3 class="font-bold mb-3">Gestión de tus Publicaciones (CRUD)</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">Si has iniciado sesión con una cuenta de <strong>Empresa</strong>, verás el botón azul <strong>"Nueva Publicación"</strong>. Al crear una oferta o demanda:</p>
+                    <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                        <li>La publicación quedará con una etiqueta amarilla de <strong>"Pendiente Validación"</strong>.</li>
+                        <li>Solo tú (el creador) y los administradores podrán verla mientras esté pendiente.</li>
+                        <li>Si eres el creador, verás un botón rojo de <strong>"Eliminar"</strong> en tu publicación para poder borrarla del sistema.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Sección 4: Panel Administrativo -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">admin_panel_settings</span> 4. Panel Administrativo (Solo Admins)</h2>
+                
+                <p class="text-slate-600 dark:text-slate-400 mb-4">Si inicias sesión con una cuenta de Administrador (ej. <code>admin@casotic.com</code>), al pulsar en tu perfil accederás al <strong>Panel Administrativo</strong> protegido. Este panel consta de dos pestañas críticas de moderación:</p>
+                
+                <ul class="list-disc pl-6 space-y-3 text-slate-600 dark:text-slate-400 mb-6">
+                    <li><strong>Usuarios y Empresas:</strong> Listado completo del sistema. Permite ver quién está pendiente de verificación. Al pulsar <strong>"Validar"</strong> en una empresa, esta pasará a ser pública en el Directorio. También puedes <strong>"Eliminar"</strong> cuentas permanentemente.</li>
+                    <li><strong>Publicaciones (Validación):</strong> Lista centralizada de todas las Ofertas, Demandas y Ofertas de Empleo. El administrador debe <strong>"Aprobar"</strong> las publicaciones pendientes para que sean visibles para el resto de usuarios en el Marketplace.</li>
+                </ul>
+            </section>
+
+            <!-- Sección 5: Chat y Negociación -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">chat</span> 5. Centro de Negociación y Chat</h2>
+                
+                <p class="text-slate-600 dark:text-slate-400 mb-4">Cuando un usuario hace clic en "Ver Detalles" o "Aplicar" en el Marketplace, es redirigido al <strong>Centro de Negociación</strong>, un entorno B2B protegido que requiere estar logueado.</p>
+                
+                <ul class="list-disc pl-6 space-y-3 text-slate-600 dark:text-slate-400 mb-6">
+                    <li>Puedes acceder al sistema de <strong>Chat</strong> en vivo.</li>
+                    <li>Escribe un mensaje y pulsa el botón de enviar. El mensaje aparecerá en pantalla y se <strong>guardará de forma persistente</strong> (permanecerá aunque cierres o recargues la página).</li>
+                </ul>
+            </section>
+
+            <!-- Sección 6: Configuración de Idioma -->
+            <section class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-primary/10 shadow-sm">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-primary"><span class="material-symbols-outlined text-3xl">language</span> 6. Multi-idioma (Internacionalización)</h2>
+                
+                <p class="text-slate-600 dark:text-slate-400">En la parte superior derecha de la cabecera encontrarás un pequeño botón con las siglas <strong>ES</strong> (Español) o <strong>EN</strong> (Inglés). Al pulsarlo, las partes clave de la interfaz, incluyendo la página principal y el registro, se traducirán dinámicamente al idioma elegido, demostrando la capacidad internacional de la plataforma.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 text-center text-slate-500 border-t border-primary/10">
+        <p>© 2024 Casotic Intelligence. All rights reserved.</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

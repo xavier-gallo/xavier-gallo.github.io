@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1732301557 source:c:\users\javier\desktop\boletin 2 algoritmia - ejercicio 2\maximizacion.c
+	"maximizacion.h"
+
+1732301541 c:\users\javier\desktop\boletin 2 algoritmia - ejercicio 2\maximizacion.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1732301516 source:c:\users\javier\desktop\boletin 2 algoritmia - ejercicio 2\main.c
+	"maximizacion.h"
+

@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[Ordenador] ([id], [id_disco], [id_fuente], [id_ram], [id_placa], [id_grafica], [id_procesador]) VALUES (1, 1, 1, 1, 1, 1, 1)
+INSERT INTO [dbo].[Ordenador] ([id], [id_disco], [id_fuente], [id_ram], [id_placa], [id_grafica], [id_procesador]) VALUES (2, 2, 2, 2, 2, 2, 2)
+INSERT INTO [dbo].[Ordenador] ([id], [id_disco], [id_fuente], [id_ram], [id_placa], [id_grafica], [id_procesador]) VALUES (3, 3, 3, 3, 3, 3, 3)
+INSERT INTO [dbo].[Ordenador] ([id], [id_disco], [id_fuente], [id_ram], [id_placa], [id_grafica], [id_procesador]) VALUES (4, 4, 4, 4, 4, 4, 4)
+INSERT INTO [dbo].[Ordenador] ([id], [id_disco], [id_fuente], [id_ram], [id_placa], [id_grafica], [id_procesador]) VALUES (5, 5, 5, 5, 5, 5, 5)

@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1734761041 source:c:\users\xavi2\onedrive\documentos\1.universidad\2 a—o\algoritmia\busqueda\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1734760748 source:c:\users\xavi2\onedrive\documentos\1.universidad\2 a—o\algoritmia\busqueda\busqueda.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1735435994 source:c:\users\javier\desktop\busqueda\main.c
+	"busqueda.h"
+
+1735434734 c:\users\javier\desktop\busqueda\busqueda.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1735434601 source:c:\users\javier\desktop\busqueda\busqueda.c
+	"busqueda.h"
+
+1735406688 source:c:\users\xavi2\downloads\busqueda\main.c
+	"busqueda.h"
+
+1735406229 c:\users\xavi2\downloads\busqueda\busqueda.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1735407240 source:c:\users\xavi2\downloads\busqueda\busqueda.c
+	"busqueda.h"
+
+1735434601 source:c:\users\javier\desktop\ejercicio 2 - busqueda\busqueda.c
+	"busqueda.h"
+
+1735434734 c:\users\javier\desktop\ejercicio 2 - busqueda\busqueda.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1735435994 source:c:\users\javier\desktop\ejercicio 2 - busqueda\main.c
+	"busqueda.h"
+

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Casotic - Tech Trends &amp; Insights</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "secondary": "#4A5568",
+                        "accent": "#AD8B73",
+                        "background-light": "#F2F4F5",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-background-light dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4 text-primary">
+                        <div class="size-8 flex items-center justify-center rounded-lg bg-primary text-white">
+                            <span class="material-symbols-outlined">dataset</span>
+                        </div>
+                        <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">
+                            Casotic</h2>
+                    </div>
+                    <label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+                        <div
+                            class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-slate-200 dark:border-slate-800">
+                            <div
+                                class="text-slate-400 flex bg-white dark:bg-slate-900 items-center justify-center pl-4">
+                                <span class="material-symbols-outlined text-[20px]">search</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-0 placeholder:text-slate-400 px-4 pl-2 text-sm"
+                                placeholder="Global search..." value="" />
+                        </div>
+                    </label>
+                </div>
+                <div class="flex flex-1 justify-end gap-6 items-center">
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="hover:text-primary transition-colors text-sm font-medium" href="index.html">News</a>
+                        <a class="hover:text-primary transition-colors text-sm font-medium"
+                            href="perfil_empresa.html">Companies</a>
+                        <a class="hover:text-primary transition-colors text-sm font-medium"
+                            href="marketplace.html">Offers</a>
+                    </nav>
+                    <div id="auth-buttons" class="flex items-center gap-4">
+                        <!-- Se llenará dinámicamente con auth.js -->
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <div class="max-w-[1280px] mx-auto w-full @container p-4 md:p-10">
+                    <div class="relative flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-8 text-center overflow-hidden"
+                        data-alt="Digital networking background with glowing lines and data clusters"
+                        style='background-image: linear-gradient(rgba(37, 107, 118, 0.8), rgba(20, 29, 30, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBLhOmxY8TW8rQyX3wsThvIgMpQ-eMIQm98su5SpzUJiNhlCjsJcyRtQXv6dvgSDGkVmEZ0KwlZcXi92d5UJlB4_dAN_I2vOBdQAjiAR3f-_Q9SYhMX6ouq0FRVvRNOd4msDEBOWVN0vwKIHUBQtk5lk_fMAgLQ0AyOW_m7JOKnPpu0bLcElSqCtZYa4pYRmtRooLwV6B8tDZO6Gim4z3GGab0KymCV9SDNg9A_lKqv8wm1hyDl8l8IfFHHazfqR-15UK0wPL_x6w4");'>
+                        <div class="flex flex-col gap-4 max-w-3xl">
+                            <span class="text-accent font-semibold tracking-widest uppercase text-sm">Insights &amp;
+                                Analytics</span>
+                            <h1 class="text-white text-4xl font-bold leading-tight md:text-6xl tracking-tight">
+                                Navigating the Future of Technology Trends
+                            </h1>
+                            <p class="text-slate-200 text-base md:text-lg font-normal leading-relaxed">
+                                Real-time data on emerging technologies, market shifts, and innovative disruptors
+                                shaping the global landscape.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 justify-center mt-4">
+                            <button onclick="window.location.href='marketplace.html'"
+                                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white text-primary text-base font-bold transition-transform hover:scale-105">Explore
+                                Trends</button>
+                            <button onclick="window.location.href='panel_administrativo.html'"
+                                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent border-2 border-white text-white text-base font-bold transition-all hover:bg-white/10">View
+                                Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured Companies -->
+                <section class="max-w-[1280px] mx-auto w-full px-6 md:px-10 py-12">
+                    <div class="flex justify-between items-end mb-8">
+                        <div>
+                            <h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Featured
+                                Companies</h2>
+                            <p class="text-secondary mt-2">Leading innovators in AI, Cloud, and Data Engineering.</p>
+                        </div>
+                        <a class="text-primary font-semibold flex items-center gap-1 hover:underline"
+                            href="empresas.html">
+                            View all <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div
+                            class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 aspect-video rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                    data-alt="Modern tech office with people working"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUx5tNhasxU-kbhuLpUPSUY6U2jbnn-iLg1TASVHsa9N71IBoECbdQnyyyZj33m4UZTO1ibrecoUjJ2vLAXJVl3nlzWGAy8op4U3-s28iLctWn6Dg9c8AQ6J_SXFSb2Y-tsg3fMrqtomFOqea1guiWaeb2Q05dmVnxYiwzVT6h4dLpwP33pDU7syEka5uCilc-W6v1wWX9EoauXdkUbz1JZ_9XEgc7KTV3OSiYAhi3laTB2OQjUnx-hkN5BC_1Si5R7EiIDjnrX5I" />
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-accent uppercase mb-1">AI &amp; Robotics</span>
+                                <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">TechCorp Systems</h3>
+                                <p class="text-secondary text-sm mt-1 line-clamp-2">Autonomous logistics solutions for
+                                    global supply chains using proprietary neural networks.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 aspect-video rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                    data-alt="Business analytics dashboard on a screen"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Cpc-Leor28TUEOE1tnZsswkMl_gtv4qOHgJBli39KzZ2ZX2-PDX3xAqDCVNTb6xvylSUzlzOfvv39FqFKQojFnQ1qJW2NWq-wu0s0wsvJd3vCOzWgHRd-wwQ66vpZgZP3Y4dejfvgNrmPkU9BCZEspKLbqDoX1e0X3D2-IA8s8TEEawpV4fLq22mxZAtOTy1xIkfQbKjoV9JMvNQI9zUzIuu8ocxf1KSl57eTGXYu1NL6QsToDb68SbRimFi8hOO95zPRCfT5Xk" />
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-accent uppercase mb-1">Software Dev</span>
+                                <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">InnoSoft Labs</h3>
+                                <p class="text-secondary text-sm mt-1 line-clamp-2">Agile digital transformation
+                                    consultancy specializing in high-load fintech applications.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 aspect-video rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                    data-alt="Server racks in a data center with blue lights"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEBK6NNQCbyJ1Fgt9KFQv1cj721bvIOU48vRjVtTg021SEwVyKGCkhRaeLVC0J0A6w8KUVge1hWofy2hStLkOq6Xa8U6eJpLiMsE1O8yZLtWhskm1UbhVPr-Hc0JqMuAcocdLwJqXYtTzJE_kwf_j61pZ4OInX1E8C6oVNbW4F7pHBAQaTBQ8HFlv7LMX9eR44LPIQDNwMA3YEVuoy1uWAAUk00QFCLDRlgwyw50lLj_47zJm5EYrnX1p2rNxTPBNM89J8og65jxU" />
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-accent uppercase mb-1">Big Data</span>
+                                <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">DataDrive Analytics
+                                </h3>
+                                <p class="text-secondary text-sm mt-1 line-clamp-2">Leveraging unstructured data to
+                                    provide predictive consumer behavior modeling.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="group flex flex-col gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md">
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 aspect-video rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                                    data-alt="Cybersecurity lock icon on a digital background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDibTAxgrKHhO2vfDgMWfoy2S3xMQcQiqQ71538o_G9Ldh_pymVUzV_5iA34emPmT5BtdCydKrW8jyMXquyW5fLs4Eo1DCXTtq-qRlslZjro6DCbWaNrvG4mzsEHn2Jxgm7R858q75MoNDMwI2syFijmEgXBdCde4aJs79ImhVxg4CVwEj5tTijfHJcLj7jnRu9UYIqdhD3S44SKN8-7mq0_zsx8MV2JvC2pXFeg9U8-uVjZe76ZKAtTL1_8nZGcHFU-VBkknUTVew" />
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-accent uppercase mb-1">Cloud Security</span>
+                                <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">CloudGen Secure</h3>
+                                <p class="text-secondary text-sm mt-1 line-clamp-2">Next-generation encryption protocols
+                                    for multi-cloud enterprise architectures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Offers & Demands -->
+                <section class="max-w-[1280px] mx-auto w-full px-6 md:px-10 py-12 bg-primary/5 rounded-3xl mb-12">
+                    <div class="flex items-center gap-3 mb-8">
+                        <span class="material-symbols-outlined text-primary text-3xl">swap_horizontal_circle</span>
+                        <h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Recent Offers
+                            &amp; Demands</h2>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Offers Column -->
+                        <div class="flex flex-col gap-4">
+                            <h3
+                                class="flex items-center gap-2 text-sm font-bold text-primary uppercase tracking-wider px-2">
+                                <span class="size-2 rounded-full bg-primary"></span> Market Offers
+                            </h3>
+                            <div class="flex flex-col gap-3">
+                                <div
+                                    class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex justify-between items-center group cursor-pointer hover:border-primary/50 transition-colors">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                                            <span class="material-symbols-outlined">api</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-slate-100">LLM API Integration
+                                                Pack</h4>
+                                            <p class="text-xs text-secondary">TechCorp • $2,500/mo</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 group-hover:text-primary">chevron_right</span>
+                                </div>
+                                <div
+                                    class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex justify-between items-center group cursor-pointer hover:border-primary/50 transition-colors">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                                            <span class="material-symbols-outlined">cloud_done</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-slate-100">Serverless
+                                                Migration Bundle</h4>
+                                            <p class="text-xs text-secondary">CloudGen • Custom Quote</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 group-hover:text-primary">chevron_right</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Demands Column -->
+                        <div class="flex flex-col gap-4">
+                            <h3
+                                class="flex items-center gap-2 text-sm font-bold text-accent uppercase tracking-wider px-2">
+                                <span class="size-2 rounded-full bg-accent"></span> Industry Demands
+                            </h3>
+                            <div class="flex flex-col gap-3">
+                                <div
+                                    class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex justify-between items-center group cursor-pointer hover:border-accent/50 transition-colors">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                            <span class="material-symbols-outlined">shield_person</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-slate-100">Senior Rust
+                                                Engineers</h4>
+                                            <p class="text-xs text-secondary">Urgent • 5 Positions</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 group-hover:text-accent">chevron_right</span>
+                                </div>
+                                <div
+                                    class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 flex justify-between items-center group cursor-pointer hover:border-accent/50 transition-colors">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-accent/10 text-accent flex items-center justify-center">
+                                            <span class="material-symbols-outlined">monitoring</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 dark:text-slate-100">ESG Data Audit
+                                                Software</h4>
+                                            <p class="text-xs text-secondary">Demanded by 12 Companies</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-slate-300 group-hover:text-accent">chevron_right</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer class="bg-slate-900 text-slate-400 py-16 px-6 md:px-20 mt-auto border-t border-slate-800">
+                <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-white">
+                            <span class="material-symbols-outlined text-primary">dataset</span>
+                            <span class="text-xl font-bold">Casotic</span>
+                        </div>
+                        <p class="text-sm leading-relaxed">
+                            Empowering the tech ecosystem with actionable intelligence and direct market access.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Platform</h4>
+                        <ul class="flex flex-col gap-3 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="index.html">Latest News</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="empresas.html">Company
+                                    Directory</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="noticias.html">Trend Reports</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Company</h4>
+                        <ul class="flex flex-col gap-3 text-sm">
+                            <li><a class="hover:text-primary transition-colors" href="empresas.html">Directorio</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="noticias.html">Noticias</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contacto.html">Contacto</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="chat.html">Community Forum</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="manual_usuario.html">Help
+                                    Center</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-6">Subscribe</h4>
+                        <p class="text-xs mb-4">Get the weekly trend report directly in your inbox.</p>
+                        <div class="flex gap-2">
+                            <input
+                                class="bg-slate-800 border-none rounded-lg text-sm w-full focus:ring-1 focus:ring-primary"
+                                placeholder="Email" type="email" />
+                            <button type="button" onclick="alert('Funcionalidad próximamente disponible')"  class="bg-primary text-white p-2 rounded-lg">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>© 2024 Casotic Intelligence. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-white transition-colors" href="manual_usuario.html">Privacy Policy</a>
+                        <a class="hover:text-white transition-colors" href="manual_usuario.html">Terms of Service</a>
+                        <a class="hover:text-white transition-colors" href="manual_usuario.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>

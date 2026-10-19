@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "accent-tan": "#AD8B73",
+                        "accent-gold": "#927E5A",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Casotic | Project Negotiation Hub</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-6 md:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8 bg-primary text-white rounded flex items-center justify-center">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">Casotic</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden md:flex gap-6 mr-8">
+<a class="text-sm font-medium text-primary border-b-2 border-primary pb-1" href="panel_administrativo.html">Dashboard</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="manual_usuario.html">Documents</a>
+<a class="text-sm font-medium text-slate-500 hover:text-primary transition-colors" href="chat.html">Messages</a>
+</div>
+<div class="flex gap-2">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBoJ0dMjvnlI1iPiVf0NFPhJ3PEDk3qX7XWb3hzls2GePSm09CemYHywCnOiCh4M-xhB-beC2VXpkCHYHNrKo0mYL-Wr2n_Dg62DHrVz9Ipxo3pQ6wxPbhxSPvTT4IdlZqDz2ePCF4tGAdXTIk2j5LQYjmSQpFTcI_aCMVSOF6nzPKmGIgLnvkcmUZLfiM_0Hw0f24Lvopyj8_HW-EjOfAAgZb2QyFAyXBZbRhx0XnW_yAQc91VcnoAPVpvScg3K9A-UvnAV-vYJ8"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full p-4 md:p-8 space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-accent-tan/20 text-accent-tan border border-accent-tan/30">In Negotiation</span>
+<span class="text-slate-400 text-sm">Project ID: #CAS-7721</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100">Project Negotiation Hub</h1>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl">Collaborative workspace for TechStream Solutions &amp; GreenEnergy Corp. Finalizing strategic partnership terms.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary text-primary font-bold hover:bg-primary/5 transition-all">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+                        Mediation Request
+                    </button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/20 hover:brightness-110 transition-all">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+                        Confirm Agreement
+                    </button>
+</div>
+</div>
+<section class="bg-white dark:bg-background-dark rounded-xl border border-primary/10 shadow-sm p-6 overflow-hidden">
+<h2 class="text-xl font-bold mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                    Negotiation Timeline
+                </h2>
+<div class="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-0">
+<div class="absolute top-[18px] left-6 md:left-0 md:w-full h-[2px] bg-slate-100 dark:bg-slate-800 hidden md:block z-0"></div>
+<div class="flex md:flex-col items-center gap-4 md:gap-3 z-10 bg-white dark:bg-background-dark md:px-4">
+<div class="size-9 rounded-full bg-primary text-white flex items-center justify-center ring-4 ring-primary/10">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<div class="text-left md:text-center">
+<p class="font-bold text-sm">Initial Contact</p>
+<p class="text-xs text-slate-500">Completed Oct 12</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center gap-4 md:gap-3 z-10 bg-white dark:bg-background-dark md:px-4">
+<div class="size-9 rounded-full bg-primary/20 text-primary flex items-center justify-center ring-4 ring-primary/5">
+<span class="material-symbols-outlined text-sm">pending</span>
+</div>
+<div class="text-left md:text-center">
+<p class="font-bold text-sm text-primary">Technical Review</p>
+<p class="text-xs text-primary/70">In Progress</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center gap-4 md:gap-3 z-10 bg-white dark:bg-background-dark md:px-4 opacity-50">
+<div class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 flex items-center justify-center ring-4 ring-slate-50 dark:ring-slate-900">
+<span class="material-symbols-outlined text-sm">description</span>
+</div>
+<div class="text-left md:text-center">
+<p class="font-bold text-sm">Terms Agreement</p>
+<p class="text-xs text-slate-500">Upcoming</p>
+</div>
+</div>
+<div class="flex md:flex-col items-center gap-4 md:gap-3 z-10 bg-white dark:bg-background-dark md:px-4 opacity-50">
+<div class="size-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 flex items-center justify-center ring-4 ring-slate-50 dark:ring-slate-900">
+<span class="material-symbols-outlined text-sm">verified</span>
+</div>
+<div class="text-left md:text-center">
+<p class="font-bold text-sm">Final Confirmation</p>
+<p class="text-xs text-slate-500">Pending</p>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-white dark:bg-background-dark rounded-xl border border-primary/10 shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-tan">folder_open</span>
+                                Document Repository
+                            </h2>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="text-sm font-semibold text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+                                Upload New
+                            </button>
+</div>
+<div class="space-y-3">
+<div class="group flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-primary/5 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded bg-red-50 text-red-500 flex items-center justify-center">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-slate-100">Mutual_NDA_Draft_v2.pdf</p>
+<p class="text-xs text-slate-500">Uploaded by TechStream â€¢ 2.4 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">visibility</span></button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+<div class="group flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-primary/5 transition-all">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded bg-blue-50 text-blue-500 flex items-center justify-center">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-slate-100">Technical_Specs_Final.docx</p>
+<p class="text-xs text-slate-500">Uploaded by GreenEnergy â€¢ 1.1 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">visibility</span></button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+<div class="group flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:border-primary/30 hover:bg-primary/5 transition-all bg-accent-gold/5 border-accent-gold/20">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded bg-accent-gold/10 text-accent-gold flex items-center justify-center">
+<span class="material-symbols-outlined">contract</span>
+</div>
+<div>
+<p class="font-medium text-slate-900 dark:text-slate-100">Main_Service_Agreement_v1.pdf</p>
+<p class="text-xs text-slate-500">Drafting Stage â€¢ Requires Approval</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-1 text-[10px] font-bold bg-accent-gold text-white rounded">PENDING</span>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-slate-400 hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-slate-50 dark:bg-slate-900 rounded-xl border border-primary/5 p-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-white/40 dark:bg-black/40 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-4xl text-slate-400 mb-2">lock</span>
+<p class="font-bold text-slate-600 dark:text-slate-300">Section Locked</p>
+<p class="text-xs text-slate-500">Available after final agreement confirmation</p>
+</div>
+<div class="opacity-30">
+<h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">star</span>
+                                Ratings &amp; Reviews
+                            </h2>
+<div class="space-y-4">
+<div class="p-3 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex gap-1 mb-2 text-accent-gold">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<div class="h-2 w-24 bg-slate-200 dark:bg-slate-700 rounded mb-2"></div>
+<div class="h-10 w-full bg-slate-100 dark:bg-slate-800 rounded"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 rounded-xl border border-primary/20 p-6">
+<h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                            CENTIC Assistance
+                        </h2>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                            Having trouble with technical terms or legal wording? Use our mediation service to get professional help.
+                        </p>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="w-full py-3 bg-white dark:bg-slate-800 border border-primary/30 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                            Contact a Mediator
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-12 border-t border-primary/10 py-8 px-10 bg-white dark:bg-background-dark">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-primary">handshake</span>
+<span class="text-sm font-medium">Â© 2024 Casotic Professional Services</span>
+</div>
+<div class="flex gap-8 opacity-50">
+<a class="text-xs hover:text-primary" href="manual_usuario.html">Legal Terms</a>
+<a class="text-xs hover:text-primary" href="manual_usuario.html">Privacy Policy</a>
+<a class="text-xs hover:text-primary" href="contacto.html">Support</a>
+</div>
+</div>
+</footer>
+</div>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Auth.requireAuth();
+    });
+</script>
+</body></html>
+
+
+

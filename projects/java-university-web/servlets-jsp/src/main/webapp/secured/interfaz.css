@@ -1,0 +1,29 @@
+@charset "UTF-8";
+body{
+	background-color: light grey;
+	font-family: Arial, sans-serif;
+}
+h1{
+	text-align: center;
+	font-size: 40px;
+}
+#contenedor{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-top: 200px;
+}
+button{
+	background-color: grey;
+	border-radius: 15px;
+	height: 200px;
+	width: 550px;
+	font-size: 25px;
+}
+.menu-button {
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		width: 250px;
+		margin-bottom: 10px;
+	}

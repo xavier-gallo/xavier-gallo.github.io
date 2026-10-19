@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1735403402 source:c:\users\javier\desktop\boletin 3 - ejercicio 1\main.c
+	"ordenacion.h"
+
+1735401949 c:\users\javier\desktop\boletin 3 - ejercicio 1\ordenacion.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+
+1734746036 source:c:\users\javier\desktop\boletin 3 - ejercicio 1\ordenacion.c
+	"ordenacion.h"
+
+1734724116 source:c:\users\javier\desktop\boletin 3 - ejercicio 1\ficheros.c
+	"ordenacion.h"
+
+1734746036 source:c:\users\javier\desktop\ejercicio 1 - ordenación\ordenacion.c
+	"ordenacion.h"
+
+1735846984 c:\users\javier\desktop\ejercicio 1 - ordenación\ordenacion.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+
+1735852743 source:c:\users\javier\desktop\ejercicio 1 - ordenación\main.c
+	"ordenacion.h"
+
+1735846984 source:c:\users\javier\desktop\ejercicio 1 - ordenación\ficheros.c
+	"ordenacion.h"
+

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CENTIC Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex flex-col bg-white dark:bg-slate-900 border-r border-primary/10">
+<div class="p-6 flex items-center gap-3">
+<img class="size-10 rounded-lg bg-primary/10 p-1" data-alt="CENTIC corporate logo symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiJ0Ni-hM7JhFZh_TzlHGqqxujPKXkrZVZPSeEJ6olbvTDCUvRTy6Ty1C6y5Nc25iZv82LZMwD5B6D1UqA-eCWkRp2FyaaZnNlJzQTCIzwwc7cIURqDY1_KNO5UVr7UUAJiiYzQoTWeKD1_bvxhyyOUIzB_W2MmiBSS9xdnoZ7CS_WdngpUjDhiT0b1w019z6-5JeopG9FTxg8-_xxNYJJaVsor5ZVIumzEy5ItCpNYOnkX0J5zHaVgz7fN7OzLawFH7vBMDsZxS8"/>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-primary">CENTIC</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-widest font-semibold">Admin Panel</p>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-white font-medium" href="panel_administrativo.html"><span class="material-symbols-outlined">dashboard</span><span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary transition-colors" href="empresas.html">
+<span class="material-symbols-outlined">domain</span>
+<span>Company Directory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary transition-colors" href="marketplace.html">
+<span class="material-symbols-outlined">storefront</span>
+<span>Marketplace View</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary transition-colors" href="noticias.html">
+<span class="material-symbols-outlined">article</span>
+<span>News Manager</span>
+</a>
+<div class="pt-4 pb-2">
+<p class="px-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">System</p>
+</div>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-primary/5 hover:text-primary transition-colors" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span>Back to Home</span>
+</a>
+</nav>
+<div class="p-4 border-t border-primary/10">
+<div class="flex items-center gap-3 p-2 bg-primary/5 rounded-xl">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold truncate">Jane Doe</p>
+<p class="text-xs text-slate-500 truncate">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-y-auto">
+<!-- Header -->
+<header class="h-16 border-b border-primary/10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md flex items-center justify-between px-8 sticky top-0 z-10">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="w-full bg-primary/5 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search validations, users or reports..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-10 flex items-center justify-center rounded-full hover:bg-primary/10 text-slate-600 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-6 w-px bg-primary/10 mx-2"></div>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                        New Report
+                    </button>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-8 space-y-8">
+<!-- Welcome Section -->
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Dashboard Overview</h2>
+<p class="text-slate-500 dark:text-slate-400">Welcome back. Here's what's happening with CENTIC today.</p>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<span class="text-green-600 text-xs font-bold bg-green-100 px-2 py-1 rounded-full">+12%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Pending Validations</p>
+<h3 class="text-2xl font-bold mt-1">128</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-amber-100 rounded-lg text-amber-600">
+<span class="material-symbols-outlined">report_problem</span>
+</div>
+<span class="text-amber-600 text-xs font-bold bg-amber-50 px-2 py-1 rounded-full">High Alert</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Unresolved Reports</p>
+<h3 class="text-2xl font-bold mt-1">42</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-green-600 text-xs font-bold bg-green-100 px-2 py-1 rounded-full">+5.2k</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Active Users</p>
+<h3 class="text-2xl font-bold mt-1">12,840</h3>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-slate-100 rounded-lg text-slate-600">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<span class="text-slate-500 text-xs font-bold bg-slate-50 px-2 py-1 rounded-full">Stable</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">System Health</p>
+<h3 class="text-2xl font-bold mt-1">99.9%</h3>
+</div>
+</div>
+<!-- Charts & Main View -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Activity Chart -->
+<div class="lg:col-span-2 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg">User Activity Trend</h3>
+<select class="text-xs bg-primary/5 border-none rounded-lg focus:ring-0">
+<option>Last 7 Days</option>
+<option>Last 30 Days</option>
+</select>
+</div>
+<div class="h-64 flex flex-col justify-end">
+<svg fill="none" height="180" preserveaspectratio="none" viewbox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_chart)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#256a74" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear_chart" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#256a74" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#256a74" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="flex justify-between mt-4 px-2">
+<p class="text-slate-400 text-xs font-bold uppercase">Mon</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Tue</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Wed</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Thu</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Fri</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Sat</p>
+<p class="text-slate-400 text-xs font-bold uppercase">Sun</p>
+</div>
+</div>
+</div>
+<!-- Recent Reports -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-primary/10 shadow-sm flex flex-col">
+<h3 class="font-bold text-lg mb-6">Recent Reports</h3>
+<div class="space-y-4 flex-1">
+<div class="flex gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors cursor-pointer border border-transparent hover:border-primary/10">
+<div class="size-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">error_outline</span>
+</div>
+<div>
+<p class="text-sm font-bold">Inappropriate Content</p>
+<p class="text-xs text-slate-500">Reported by Alex Smith â€¢ 2m ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors cursor-pointer border border-transparent hover:border-primary/10">
+<div class="size-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold">Suspicious Account</p>
+<p class="text-xs text-slate-500">Reported by Sarah J. â€¢ 15m ago</p>
+</div>
+</div>
+<div class="flex gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors cursor-pointer border border-transparent hover:border-primary/10">
+<div class="size-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">policy</span>
+</div>
+<div>
+<p class="text-sm font-bold">Terms Violation</p>
+<p class="text-xs text-slate-500">Reported by Bot #42 â€¢ 1h ago</p>
+</div>
+</div>
+</div>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="w-full py-2 mt-4 text-sm font-semibold text-primary border border-primary/20 rounded-xl hover:bg-primary/5 transition-colors">View All Reports</button>
+</div>
+</div>
+<!-- User Management Table -->
+<div class="bg-white dark:bg-slate-900 rounded-2xl border border-primary/10 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-primary/10 flex items-center justify-between">
+<div>
+<h3 class="font-bold text-lg">User Management</h3>
+<p class="text-sm text-slate-500">Manage pending company and individual validations</p>
+</div>
+<div class="flex gap-2">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="px-4 py-2 text-sm font-medium border border-primary/10 rounded-lg hover:bg-slate-50">Export</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="px-4 py-2 text-sm font-medium bg-primary text-white rounded-lg shadow-sm shadow-primary/20">Bulk Approve</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<div class="mt-8">
+    <div class="flex gap-4 mb-6 border-b border-slate-200 dark:border-slate-800">
+        <button id="tab-users" onclick="switchAdminTab('users')" class="px-4 py-2 border-b-2 border-primary text-primary font-bold">Usuarios y Empresas</button>
+        <button id="tab-pubs" onclick="switchAdminTab('pubs')" class="px-4 py-2 border-b-2 border-transparent text-slate-500 hover:text-primary font-bold">Publicaciones (ValidaciÃ³n)</button>
+    </div>
+
+    <!-- Users Table -->
+    <div id="view-users" class="bg-white dark:bg-background-dark/50 border border-primary/10 rounded-xl overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-primary/5 dark:bg-primary/10 text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 border-b border-primary/10">
+                        <th class="px-6 py-4 font-bold">Entidad / Nombre</th>
+                        <th class="px-6 py-4 font-bold">DNI/CIF</th>
+                        <th class="px-6 py-4 font-bold">Rol</th>
+                        <th class="px-6 py-4 font-bold">Estado</th>
+                        <th class="px-6 py-4 font-bold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-users-table" class="divide-y divide-primary/5">
+                    <!-- DinÃ¡mico -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Publications Table -->
+    <div id="view-pubs" class="bg-white dark:bg-background-dark/50 border border-primary/10 rounded-xl overflow-hidden shadow-sm hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-primary/5 dark:bg-primary/10 text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 border-b border-primary/10">
+                        <th class="px-6 py-4 font-bold">TÃ­tulo</th>
+                        <th class="px-6 py-4 font-bold">Tipo</th>
+                        <th class="px-6 py-4 font-bold">Estado</th>
+                        <th class="px-6 py-4 font-bold text-right">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-pubs-table" class="divide-y divide-primary/5">
+                    <!-- DinÃ¡mico -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="p-6 bg-primary/5 flex items-center justify-between">
+<p class="text-sm text-slate-500">Showing 1-10 of 248 results</p>
+<div class="flex gap-2">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-8 flex items-center justify-center rounded border border-primary/20 bg-white hover:bg-primary/5"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-8 flex items-center justify-center rounded border border-primary/20 bg-primary text-white font-bold text-xs">1</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-8 flex items-center justify-center rounded border border-primary/20 bg-white hover:bg-primary/5 text-xs">2</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-8 flex items-center justify-center rounded border border-primary/20 bg-white hover:bg-primary/5 text-xs">3</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="size-8 flex items-center justify-center rounded border border-primary/20 bg-white hover:bg-primary/5"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Auth.requireAdmin();
+        loadAdminData();
+    });
+
+    function switchAdminTab(tab) {
+        if (tab === 'users') {
+            document.getElementById('view-users').classList.remove('hidden');
+            document.getElementById('view-pubs').classList.add('hidden');
+            document.getElementById('tab-users').classList.replace('border-transparent', 'border-primary');
+            document.getElementById('tab-users').classList.replace('text-slate-500', 'text-primary');
+            document.getElementById('tab-pubs').classList.replace('border-primary', 'border-transparent');
+            document.getElementById('tab-pubs').classList.replace('text-primary', 'text-slate-500');
+        } else {
+            document.getElementById('view-users').classList.add('hidden');
+            document.getElementById('view-pubs').classList.remove('hidden');
+            document.getElementById('tab-pubs').classList.replace('border-transparent', 'border-primary');
+            document.getElementById('tab-pubs').classList.replace('text-slate-500', 'text-primary');
+            document.getElementById('tab-users').classList.replace('border-primary', 'border-transparent');
+            document.getElementById('tab-users').classList.replace('text-primary', 'text-slate-500');
+        }
+    }
+
+    function loadAdminData() {
+        // Cargar Usuarios
+        const users = DB.getTable('users');
+        const tbodyUsers = document.getElementById('admin-users-table');
+        tbodyUsers.innerHTML = '';
+        
+        users.forEach(user => {
+            const roleBadge = user.role === 'admin' ? '<span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-bold">Admin</span>' : '<span class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-bold">' + user.role.toUpperCase() + '</span>';
+            const statusBadge = user.verified ? 
+                '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Verificado</span>' : 
+                '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">Pendiente</span>';
+            
+            const validateBtn = !user.verified ? `<button onclick="validateItem('users', ${user.id})" class="text-primary hover:underline font-semibold text-sm mr-3">Validar</button>` : '';
+
+            tbodyUsers.innerHTML += `
+            <tr class="hover:bg-primary/5 transition-colors">
+                <td class="px-6 py-4">
+                    <div class="flex items-center gap-3">
+                        <div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center font-bold text-primary">${user.name.charAt(0)}</div>
+                        <div>
+                            <p class="text-sm font-bold">${user.name}</p>
+                            <p class="text-xs text-slate-500">${user.email}</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-6 py-4 text-sm">${user.dni || 'N/A'}</td>
+                <td class="px-6 py-4 text-sm">${roleBadge}</td>
+                <td class="px-6 py-4">${statusBadge}</td>
+                <td class="px-6 py-4 text-right">
+                    ${validateBtn}
+                    <button onclick="deleteItem('users', ${user.id})" class="text-red-500 hover:underline font-semibold text-sm">Eliminar</button>
+                </td>
+            </tr>`;
+        });
+
+        // Cargar Publicaciones (Offers, Demands, Jobs)
+        const pubs = DB.getTable('publications');
+        const jobs = DB.getTable('jobs');
+        const allPubs = [...pubs.map(p => ({...p, table: 'publications'})), ...jobs.map(j => ({...j, table: 'jobs'}))];
+        
+        const tbodyPubs = document.getElementById('admin-pubs-table');
+        tbodyPubs.innerHTML = '';
+
+        allPubs.forEach(pub => {
+            const statusBadge = pub.validated ? 
+                '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Aprobada</span>' : 
+                '<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">Pendiente</span>';
+            
+            const validateBtn = !pub.validated ? `<button onclick="validateItem('${pub.table}', ${pub.id}, 'validated')" class="text-primary hover:underline font-semibold text-sm mr-3">Aprobar</button>` : '';
+
+            tbodyPubs.innerHTML += `
+            <tr class="hover:bg-primary/5 transition-colors">
+                <td class="px-6 py-4">
+                    <p class="text-sm font-bold">${pub.title}</p>
+                    <p class="text-xs text-slate-500 line-clamp-1">${pub.description}</p>
+                </td>
+                <td class="px-6 py-4 text-sm"><span class="bg-primary/10 text-primary px-2 py-1 rounded text-xs font-bold uppercase">${pub.type || 'job'}</span></td>
+                <td class="px-6 py-4">${statusBadge}</td>
+                <td class="px-6 py-4 text-right">
+                    ${validateBtn}
+                    <button onclick="deleteItem('${pub.table}', ${pub.id})" class="text-red-500 hover:underline font-semibold text-sm">Eliminar</button>
+                </td>
+            </tr>`;
+        });
+    }
+
+    function validateItem(table, id, field = 'verified') {
+        if(confirm('Â¿Aprobar este registro?')) {
+            DB.update(table, id, { [field]: true });
+            
+            // Si es un usuario de tipo empresa, validar tambiÃ©n la empresa asociada
+            if (table === 'users' && field === 'verified') {
+                const user = DB.getTable('users').find(u => u.id === id);
+                if (user && user.companyId) {
+                    DB.update('companies', user.companyId, { validated: true });
+                }
+            }
+            
+            loadAdminData();
+        }
+    }
+
+    function deleteItem(table, id) {
+        if(confirm('Â¿Seguro que deseas eliminar este registro permanentemente?')) {
+            DB.remove(table, id);
+            loadAdminData();
+        }
+    }
+</script>
+</body></html>
+
+
+

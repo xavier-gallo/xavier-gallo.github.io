@@ -28,7 +28,7 @@ const PROJECTS = [
     ],
     note: "The socket version keeps its data in memory only; there is no database.",
     stack: ["Java", "Sockets", "Threads", "Object serialization", "Java RMI", "Eclipse"],
-    repo: "distributed-apps-java",
+    path: "projects/distributed-apps-java",
     demo: false
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS = [
     ],
     note: "Not packaged with Maven or Gradle yet; the required libraries are listed in the repository instead of being committed.",
     stack: ["Java", "Servlets", "JSP", "Jersey (JAX-RS)", "JSON-B", "Eclipse"],
-    repo: "java-university-web",
+    path: "projects/java-university-web",
     demo: false
   },
   {
@@ -55,7 +55,7 @@ const PROJECTS = [
     ],
     note: "Learning project, not safe to deploy as it is: passwords are stored as plain text, database credentials and the admin login are hard-coded, and some SQL queries concatenate request parameters (SQL injection risk).",
     stack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    repo: "f1-merch-store",
+    path: "projects/f1-merch-store",
     demo: false
   },
   {
@@ -69,7 +69,7 @@ const PROJECTS = [
     ],
     note: "The notebook reads its dataset from Google Drive, so it cannot be re-run without that data.",
     stack: ["Python", "TensorFlow/Keras", "EfficientNetV2B1", "scikit-learn", "NumPy", "Matplotlib"],
-    repo: "colon-tissue-classifier",
+    path: "projects/colon-tissue-classifier",
     demo: false
   }
 ];
@@ -79,30 +79,30 @@ const MORE = [
   {
     name: "Casotic marketplace prototype",
     summary: "Marketplace prototype for technology companies, startups and investors, with role-based access, an admin panel and a Spanish/English switch, for the IT Project Management course. Front-end only: data lives in LocalStorage and login is simulated.",
-    role: "I led the project team, coordinating the work from planning through the final prototype.",
+    role: "Project leader: I led the team and coordinated the work from planning through delivery of the final prototype.",
     stack: ["HTML", "Tailwind CSS", "JavaScript"],
-    repo: "casotic",
+    path: "projects/casotic",
     demo: false
   },
   {
     name: "PC component configurator",
     summary: "Windows Forms application to choose PC components from a SQL Server database, with separate user and admin screens, for the Advanced Visual Programming course (team of three).",
     stack: ["C#", ".NET Framework 4.7.2", "Windows Forms", "SQL Server"],
-    repo: "pc-component-configurator",
+    path: "projects/pc-component-configurator",
     demo: false
   },
   {
     name: "Algorithms in C",
     summary: "Hash table, backtracking, sorting and searching assignments, each with a written report, for the Algorithmics course.",
     stack: ["C"],
-    repo: "algorithms-c",
+    path: "projects/algorithms-c",
     demo: false
   },
   {
     name: "Database management coursework",
     summary: "SQL schema and database export scripts for an academic database management project.",
     stack: ["Oracle SQL", "Oracle APEX"],
-    repo: "sgi-database-project",
+    path: "projects/sgi-database-project",
     demo: false
   }
 ];
@@ -144,8 +144,8 @@ function fillProfile() {
 /* Source and demo links appear only when the repository really exists (repo is not null). */
 function repoLinks(p) {
   const links = [];
-  if (p.repo && hasUser) {
-    links.push(el("a", { href: ghUrl(`/${p.repo}`), "aria-label": `Source code for ${p.name}` }, "Source code"));
+  if (p.path && hasUser) {
+    links.push(el("a", { href: ghUrl(`/xavier-gallo.github.io/tree/main/${p.path}`), "aria-label": `Source code for ${p.name}` }, "Source code"));
     if (p.demo) {
       links.push(el("a", { href: `https://${PROFILE.github.trim()}.github.io/${p.repo}/`, "aria-label": `Live demo of ${p.name}` }, "Live demo"));
     }

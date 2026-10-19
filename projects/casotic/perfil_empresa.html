@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#141d1e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>CasoticTech | Company Profile</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-primary/10 px-6 md:px-20 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+    <div class="flex items-center gap-8">
+        <div class="flex items-center gap-4 text-primary cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined text-3xl">dataset</span>
+            <h2 class="text-xl font-bold">Casotic</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="empresas.html">Empresas</a>
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="marketplace.html">Marketplace</a>
+            <a class="hover:text-primary transition-colors text-sm font-medium" href="noticias.html">Noticias</a>
+        </nav>
+    </div>
+    <div class="flex flex-1 justify-end gap-6 items-center">
+        <div id="auth-buttons"></div>
+    </div>
+</header>
+<main class="max-w-6xl mx-auto w-full px-4 md:px-10 py-6">
+<!-- Hero Section -->
+<section class="rounded-xl overflow-hidden relative group">
+<div class="h-64 md:h-80 w-full bg-primary/20 relative">
+<img class="w-full h-full object-cover" data-alt="Futuristic digital network abstract background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHpKhVXQt2JR6dNgolFSq1tlM7IRx6iDbhqbF3OejJPf-YUpNVqr9uUuBGZS1zpW9TBKihuaygwHWGzOZp26dSsKKsMTRJg-St0KsmjPZdjtzkEDzT0Ap0zlC5WcN6sJScQ44-c_FI7kiMFgdrF1wX6FaZdfQxxxwMoPEfUmrW08KMVKOdLr27CYVj0BzQolPkSfEoUkBmS_GvMPVKQxy-baJijIi5-fHeqYY8O531MhYK4333FCXw3aiKZZVe75TtqTaGUmBu3gA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-10 flex flex-col md:flex-row items-end md:items-center justify-between gap-6">
+<div class="flex gap-6 items-center">
+<div class="h-24 w-24 md:h-32 md:32 rounded-xl bg-white dark:bg-background-dark p-2 shadow-xl border border-primary/10 overflow-hidden">
+<img class="h-full w-full object-cover rounded-lg" data-alt="Company logo minimalist geometric shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgBNQzIYLTlao4gLa5eYuE6CDR7nWrqV3hq_fGOr7hiO_-QCcfV84YawsdD99CrP6MJzeOyaNrDuhvjgo9Fk7plF8gvz43vdPke2cR9r2tbRt1zyAxLL71lpqDLx9101KWbUSbOCpGmtvtNmGaGzRaCZd_EWZhKseWsx8arjHwnc9d04OVQcd3Hc8YMV1_P1Kaf8GVU5sZVZ2i1yWaZpR8OW0tNRjTaH-5cDL_ud1MiBZByClYTAdq7l-ts7JWlCSJF7yEEMngHtc"/>
+</div>
+<div class="flex flex-col text-white">
+<div class="flex items-center gap-2">
+<h1 id="company-name" class="text-2xl md:text-4xl font-bold">Casotic Systems</h1>
+<span class="material-symbols-outlined text-primary bg-white rounded-full p-0.5 text-sm">verified</span>
+</div>
+<p id="company-desc" class="text-slate-200 text-sm md:text-base mt-1">Next-gen AI Infrastructure &amp; Smart City OS</p>
+<div class="flex items-center gap-2 mt-2 text-slate-300 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Casotic Tech District, Block 7</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button onclick="window.location.href='centro_negociacion.html'" class="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-lg font-bold hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-lg">chat</span>
+<span>Contact / Chat</span>
+</button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center justify-center h-11 w-11 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+<!-- Left Column: About & Tags -->
+<div class="lg:col-span-1 space-y-8">
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/5 shadow-sm">
+<h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                        About Us
+                    </h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                        Founded in 2021, Casotic Systems is pioneering the integration of decentralized AI with urban infrastructure. Our proprietary OS allows cities to manage energy, traffic, and public services with unprecedented efficiency.
+                    </p>
+<div class="mt-6 pt-6 border-t border-primary/10">
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-500">Founded</span>
+<span class="font-medium">2021</span>
+</div>
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-500">Team Size</span>
+<span class="font-medium">45-100</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Stage</span>
+<span class="font-medium text-primary">Series B</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4">Technology Categories</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">Artificial Intelligence</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">Smart Infrastructure</span>
+<span class="px-3 py-1.5 bg-primary/10 text-primary text-xs font-bold rounded-full border border-primary/20">CleanTech</span>
+</div>
+</div>
+
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-primary/5 shadow-sm">
+    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary">play_circle</span>
+        Canal Corporativo
+    </h3>
+    <div id="company-video-container" class="w-full aspect-video rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center">
+        <!-- Iframe from JS -->
+    </div>
+</div>
+</div>
+<!-- Right Column: Tabs & Content -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Custom Tabs Component -->
+<div class="border-b border-primary/10">
+<nav class="flex gap-8 overflow-x-auto no-scrollbar">
+<button id="tab-offer" onclick="switchCompanyTab('offer')" class="pb-4 text-sm font-bold text-primary border-b-2 border-primary whitespace-nowrap">
+    Our Tech Offers
+</button>
+<button id="tab-demand" onclick="switchCompanyTab('demand')" class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary whitespace-nowrap border-b-2 border-transparent transition-colors">
+    Our Tech Demands
+</button>
+<button id="tab-review" onclick="switchCompanyTab('review')" class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-primary whitespace-nowrap border-b-2 border-transparent transition-colors flex items-center gap-1">
+    Reviews
+</button>
+</nav>
+</div>
+
+<!-- Dynamic Tab Content -->
+<div id="company-pubs-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+    <!-- Cargado por JS -->
+</div>
+<!-- Section: Insights -->
+<div class="mt-10 bg-primary/5 rounded-xl p-6 border border-primary/10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Latest Innovation Insights</h3>
+<a class="text-primary text-sm font-bold flex items-center gap-1" href="noticias.html">View all <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4 items-center">
+<div class="h-16 w-16 flex-shrink-0 rounded-lg bg-slate-200 overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Close up of modern circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtWah2s1yXtpTMghrBzDSUdPr5Lhu89lFcloC1s0-tdIUDSVovl2flnXwO52egEnN7oQqFPi-_TskzJ9DKtqzxLYuVsNuSucZsc9EcjSudatdurknfu1PuursPMUh1Jh-8np3ay55omcrQe3G0-UO-A7ouK0_4HU8DmkaD-8-DIOzCySf0UPeyofqy7wetj-_KsljPj8i0-JzuSTDhL82vlUQADRU788JyzuUJ2UhhTuN1R5mYVNBEEjcF78hbE5GkYRWIQh-8kds"/>
+</div>
+<div>
+<h5 class="text-sm font-bold">How AI is reshaping Casotic's traffic flow</h5>
+<p class="text-[10px] text-slate-500 mt-1">October 24, 2023 â€¢ 5 min read</p>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="h-16 w-16 flex-shrink-0 rounded-lg bg-slate-200 overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Light trails on a city street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVbIpfdX2tT2e8_4IISyuZBttacVWjogX2z7Yq1MBB-p8PbPZazW5gwFmyChX5Q-LSWFpI1kj-l8YVvLf2BQU_zaqkhQ1kBgbhN-bPvWFPEgOo6VCQFpD_CCNHXIfvaxFzpwimFL0Gg7mWgNc7nRCzZPVtSuPv265khECgU8IvHiVbaenMad60HuIFHqgQ7cMKqsrrIql4PeSlRHDuBsKikEmxQFN6WH6nXp4Kw8KCsIB44zeFu54Ocp68MGcdDbvMg77ccn8WPUo"/>
+</div>
+<div>
+<h5 class="text-sm font-bold">Sustainable energy for the modern tech hub</h5>
+<p class="text-[10px] text-slate-500 mt-1">October 12, 2023 â€¢ 8 min read</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-primary/10 bg-white dark:bg-background-dark/80 py-10">
+<div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">token</span>
+<span class="font-bold">CasoticTech</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary" href="manual_usuario.html">Privacy Policy</a>
+<a class="hover:text-primary" href="manual_usuario.html">Terms of Service</a>
+<a class="hover:text-primary" href="contacto.html">Contact</a>
+</div>
+<div class="flex gap-4">
+<div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary cursor-pointer hover:bg-primary/20">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary cursor-pointer hover:bg-primary/20">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</div>
+</div>
+</div>
+<div class="text-center mt-8 text-[10px] text-slate-400">
+            Â© 2024 Casotic Systems. All rights reserved.
+        </div>
+</footer>
+</div>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+    let currentCompanyId = 1;
+    let currentTab = 'offer';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Obtener el ID de la empresa de la URL, por defecto 1
+        const urlParams = new URLSearchParams(window.location.search);
+        currentCompanyId = parseInt(urlParams.get('id')) || 1;
+        const company = DB.getTable('companies').find(c => c.id === currentCompanyId);
+        
+        if (company) {
+            document.getElementById('company-name').innerText = company.name;
+            document.getElementById('company-desc').innerText = company.description;
+            
+            if (company.videoUrl) {
+                document.getElementById('company-video-container').innerHTML = `<iframe class="w-full h-full" src="${company.videoUrl}" frameborder="0" allowfullscreen></iframe>`;
+            } else {
+                document.getElementById('company-video-container').innerHTML = '<p class="text-slate-500 text-sm">No hay vÃ­deo disponible</p>';
+            }
+
+            renderCompanyPubs();
+        }
+    });
+
+    function switchCompanyTab(tab) {
+        currentTab = tab;
+        
+        // Reset all tabs styles
+        ['offer', 'demand', 'review'].forEach(t => {
+            const el = document.getElementById('tab-' + t);
+            if(t === tab) {
+                el.classList.add('text-primary', 'border-primary');
+                el.classList.remove('text-slate-500', 'border-transparent');
+            } else {
+                el.classList.add('text-slate-500', 'border-transparent');
+                el.classList.remove('text-primary', 'border-primary');
+            }
+        });
+
+        renderCompanyPubs();
+    }
+
+    function renderCompanyPubs() {
+        const grid = document.getElementById('company-pubs-grid');
+        grid.innerHTML = '';
+
+        if (currentTab === 'review') {
+            grid.innerHTML = '<p class="text-slate-500 text-sm col-span-full">No hay valoraciones disponibles para esta empresa.</p>';
+            return;
+        }
+
+        const pubs = DB.getTable('publications').filter(p => p.companyId === currentCompanyId && p.type === currentTab && p.validated);
+
+        if (pubs.length === 0) {
+            grid.innerHTML = '<p class="text-slate-500 text-sm col-span-full">Esta empresa no tiene publicaciones activas en esta categorÃ­a.</p>';
+            return;
+        }
+
+        pubs.forEach(pub => {
+            const icon = pub.type === 'offer' ? 'lightbulb' : 'search_insights';
+            const colorClass = pub.type === 'offer' ? 'green' : 'amber';
+
+            grid.innerHTML += `
+            <div class="bg-white dark:bg-slate-900 border border-primary/10 rounded-xl p-5 hover:shadow-md transition-shadow group flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="h-10 w-10 bg-${colorClass}-100 rounded-lg flex items-center justify-center text-${colorClass}-600">
+                            <span class="material-symbols-outlined">${icon}</span>
+                        </div>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold uppercase rounded">${pub.date}</span>
+                    </div>
+                    <h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-primary transition-colors">${pub.title}</h4>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-4">${pub.description}</p>
+                </div>
+                <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-3">
+                    <button onclick="window.location.href='centro_negociacion.html'" class="text-primary font-bold text-xs hover:underline flex items-center gap-1">Contactar <span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+                </div>
+            </div>`;
+        });
+    }
+</script>
+</body></html>
+
+
+

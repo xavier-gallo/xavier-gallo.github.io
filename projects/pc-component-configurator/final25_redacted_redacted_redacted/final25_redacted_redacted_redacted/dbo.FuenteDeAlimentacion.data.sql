@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[FuenteDeAlimentacion] ([id], [vatios], [nombre], [precio]) VALUES (1, 450, N'EVGA 450W           ', 45)
+INSERT INTO [dbo].[FuenteDeAlimentacion] ([id], [vatios], [nombre], [precio]) VALUES (2, 550, N'Corsair CV550       ', 55)
+INSERT INTO [dbo].[FuenteDeAlimentacion] ([id], [vatios], [nombre], [precio]) VALUES (3, 650, N'Aerocool VX Plus    ', 50)
+INSERT INTO [dbo].[FuenteDeAlimentacion] ([id], [vatios], [nombre], [precio]) VALUES (4, 750, N'Thermaltake Smart   ', 80)
+INSERT INTO [dbo].[FuenteDeAlimentacion] ([id], [vatios], [nombre], [precio]) VALUES (5, 850, N'CoolerMaster MWE    ', 100)

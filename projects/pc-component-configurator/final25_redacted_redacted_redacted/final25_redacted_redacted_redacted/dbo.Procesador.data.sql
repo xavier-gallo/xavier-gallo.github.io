@@ -1,0 +1,5 @@
+INSERT INTO [dbo].[Procesador] ([Id], [ghz], [nombre], [precio]) VALUES (1, 3.5, N'Intel Core i3-10100 ', 90)
+INSERT INTO [dbo].[Procesador] ([Id], [ghz], [nombre], [precio]) VALUES (2, 3.6, N'Intel Core i5-10400F', 130)
+INSERT INTO [dbo].[Procesador] ([Id], [ghz], [nombre], [precio]) VALUES (3, 4, N'AMD Ryzen 5 5600G   ', 150)
+INSERT INTO [dbo].[Procesador] ([Id], [ghz], [nombre], [precio]) VALUES (4, 4.2, N'Intel Core i7-10700K', 280)
+INSERT INTO [dbo].[Procesador] ([Id], [ghz], [nombre], [precio]) VALUES (5, 3.8, N'AMD Ryzen 7 5800X   ', 320)

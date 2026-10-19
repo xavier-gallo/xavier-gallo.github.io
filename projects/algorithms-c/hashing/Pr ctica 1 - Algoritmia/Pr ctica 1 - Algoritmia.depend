@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1730479490 source:c:\users\javier\desktop\práctica 1 - algoritmia\main.c
+	"hashing.h"
+
+1730478462 c:\users\javier\desktop\práctica 1 - algoritmia\hashing.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<windows.h>
+
+1730215330 source:c:\users\javier\desktop\práctica 1 - algoritmia\hashing.c
+	"hashing.h"
+

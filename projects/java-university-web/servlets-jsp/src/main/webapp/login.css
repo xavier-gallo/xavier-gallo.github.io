@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body{
+	background-color: light grey;
+	font-family: Arial, sans-serif;
+}
+h1{
+	text-align: center;
+	margin-bottom: 200px; 
+}
+form{
+	text-align: center;
+}
+label{
+	font-size: 20px;
+}
+#enviar{
+	width:100px;
+	height: 30px;
+	border-radius: 20px;
+}
+input{
+	width: 250px;                  
+    margin-bottom: 20px;   
+    font-size: 18px;
+}

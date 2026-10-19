@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1732240016 source:c:\users\javier\desktop\boletin 2 algoritmia\main.c
+	"backtracking.h"
+
+1732239679 c:\users\javier\desktop\boletin 2 algoritmia\backtracking.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1732238853 source:c:\users\javier\desktop\boletin 2 algoritmia\backtracking.c
+	"backtracking.h"
+

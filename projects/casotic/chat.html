@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Casotic Systems | Professional Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256a74",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#141d1e",
+                        "secondary": "#4A5568",
+                        "surface": "#F2F4F5"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Sidebar: Conversations -->
+<aside class="w-80 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">hub</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary">Casotic</h2>
+</div>
+<div class="p-4">
+<label class="relative block">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-sm">search</span>
+</span>
+<input class="w-full bg-surface dark:bg-slate-800 border-none rounded-lg py-2 pl-10 pr-3 text-sm focus:ring-1 focus:ring-primary/50" placeholder="Search partners..." type="text"/>
+</label>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<div class="px-3 py-2 text-xs font-semibold text-secondary uppercase tracking-wider">Active Collaborations</div>
+<!-- Conversation Item: Active -->
+<div class="flex items-center gap-3 px-4 py-3 bg-primary/5 border-r-4 border-primary cursor-pointer">
+<div class="relative">
+<div class="size-12 rounded-full bg-slate-200" data-alt="EcoGrid Solutions Company Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyD1wgnWElZ-PvQHoFJmZJN3IButd_zEcepcTofz7pXJ7_aFE7UOVCnExjZcF6O9CmtAW-AoJTW1-RJpMRgCdm3HOykuJqi3fGdWYYMCOXIjOy10g9EyUC9-Y_F3Tn6QFazw0jOITs4L4Y-TZDC9xATMl2rtr-L6tDJkZBqVgx__m3QJeogSiZYDEuQKAmV0VuFiYg0YKkalbszXlqWvAD7mv-gQtBUhkc8oy4v5lCApW63vVOPNuWo_DJSqh_MlCM-60pa-fohW8');"></div>
+<span class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h4 class="text-sm font-bold truncate">EcoGrid Solutions</h4>
+<span class="text-[10px] text-slate-400">10:45 AM</span>
+</div>
+<p class="text-xs text-secondary truncate">Regarding the Smart Grid API...</p>
+</div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+<div class="relative">
+<div class="size-12 rounded-full bg-slate-200" data-alt="Nexus Dynamics Startup Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzq8pT_bCinNfPqoyRwgvhMckhDupYX5_WXvjsZ1_2Cs5jAWSgFPIekMU0TKCbyAFLCvDRD4ttFh2zTyyjnIbzY3PEnNJLqYdMmcB8c708FEnh4C7y5GwuXJW9mFAS1_T8VG_Y7RHvaioWxs9AaNWJY1Mm78CFg2TZOrC0RcIGMK85xNkr47kbKre3VIe7AaO8og0rAjUyqh510eidnVWHCALqlP47_sg500Afnm1h0QIxJXScJjHfScomSWs_q1DD0WOcd_43tsQ');"></div>
+<span class="absolute bottom-0 right-0 size-3 bg-slate-300 border-2 border-white rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h4 class="text-sm font-medium truncate">Nexus Dynamics</h4>
+<span class="text-[10px] text-slate-400">Yesterday</span>
+</div>
+<p class="text-xs text-slate-400 truncate">The PDF proposal has been uploaded.</p>
+</div>
+</div>
+<!-- Conversation Item -->
+<div class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors">
+<div class="relative">
+<div class="size-12 rounded-full bg-slate-200" data-alt="Quantum Core Systems Logo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqvZTZJXsywqMBH7Eo8v2zjgOirVSw3y2PlccvevQ9a0Pp7Q86OkhRDqhCRktNBFvuVkHz_jZtmSZ69R7-BPddblvGNHLvwK6Df5tW6iVqJKazJ0DlmNX5_qDOP86uI0YH3CDZWZ_CdTTj8taaa96rqloNF63_--FHcpEAQIrtbCDF6hYBTxLGY4a0mg1CbqQ1akI_dMr2glvh_DN9YEMExWpoX8DXkonDU9mbSZRbrwcZoQD0HsPQZhVBFRdWXSFxQwdcehWbOSw');"></div>
+<span class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline">
+<h4 class="text-sm font-medium truncate">Quantum Core</h4>
+<span class="text-[10px] text-slate-400">Tue</span>
+</div>
+<p class="text-xs text-slate-400 truncate">System architecture sync needed.</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="w-full flex items-center justify-center gap-2 py-2.5 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-lg">add_comment</span>
+                New Partnership
+            </button>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<main class="flex-1 flex flex-col bg-background-light dark:bg-background-dark">
+<!-- Top Nav Bar -->
+<header class="h-16 px-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-10 rounded-lg bg-slate-100" data-alt="EcoGrid Solutions Profile" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABlTT7IiK-eEX-D9_Qu1G5iitrDnb774Oe6oolsS3THJyISBkRjyV7fEM73Cse2s8uNzkNmgOLX610TV2cM1rrSIi_0_uqP4cOh8e8OTjP4eOkbJKOaQ_X4lC7UZrCaHamEV7ESAn8Mb_ZoO1BxJpe6Njue7QjbkRW_8ww83KYVNms7Y7MmfbiZcz5-YjafaWwL2R1y7kEQaWhO50lc-qng6ZuWyhHvCbv9993KoqtzqT4fuYgLga96Q8DYvzfNwFB93QwZv2DgP4');"></div>
+<span class="absolute -bottom-1 -right-1 size-3 bg-green-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-slate-100">EcoGrid Solutions</h3>
+<p class="text-xs text-green-600 font-medium flex items-center gap-1">
+<span class="size-1.5 rounded-full bg-green-600"></span> Online
+                    </p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-primary/30 text-primary text-sm font-semibold hover:bg-primary/5">
+<span class="material-symbols-outlined text-lg">gavel</span>
+                    Invite CENTIC Mediator
+                </button>
+<div class="h-6 w-px bg-slate-200 mx-2"></div>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-secondary hover:bg-slate-100 rounded-lg"><span class="material-symbols-outlined">call</span></button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-secondary hover:bg-slate-100 rounded-lg"><span class="material-symbols-outlined">videocam</span></button>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-secondary hover:bg-slate-100 rounded-lg"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</header>
+<!-- Messages Content -->
+<div id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 custom-scrollbar">
+<!-- Date Divider -->
+<div class="flex justify-center">
+<span class="px-4 py-1 bg-surface dark:bg-slate-800 rounded-full text-[10px] font-bold text-secondary uppercase tracking-widest">Today</span>
+</div>
+<!-- Message: Received -->
+<div class="flex gap-3 max-w-2xl">
+<div class="size-8 rounded-full bg-slate-200 shrink-0 mt-1" data-alt="EcoGrid Contact Avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtCb0LWSZ2LcdUprzVbU5wjvHD_3dW8bmEZJtJC4RfPoZZYtZvkaMpHpBpWBv68HbpNVk7ktmE2fkANrWadMygPfJMfBpzqieVgjvLhxlVKJEl3Xby3MR2LTeyCpylR4Sc0sdkHDn0-DNJ6NUmaLyUarv3DI39SHv-h_lIdfGyvP7jBm9Et66OhRVGufG-nwQOhqKtZH-tLse4wew4hQL2q8jEPHavP-00woNAAGxFKZEtkmsKciwb6zOJWDYB8JR1rxs1fSwtT7Q');"></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold">Sarah Jenkins</span>
+<span class="text-[10px] text-slate-400">10:42 AM</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-3 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-sm leading-relaxed">Hello Casotic team. We've finalized the preliminary technical specifications for the Smart Grid API integration. Can you review the attached document?</p>
+</div>
+</div>
+</div>
+<!-- Message: Sent -->
+<div class="flex gap-3 max-w-2xl self-end flex-row-reverse">
+<div class="size-8 rounded-full bg-primary shrink-0 mt-1 flex items-center justify-center text-white text-[10px] font-bold">CS</div>
+<div class="flex flex-col gap-1 items-end">
+<div class="flex items-center gap-2">
+<span class="text-[10px] text-slate-400">10:45 AM</span>
+<span class="text-xs font-bold">Alex Rivera (Me)</span>
+</div>
+<div class="bg-primary text-white p-3 rounded-xl rounded-tr-none shadow-sm">
+<p class="text-sm leading-relaxed">Thanks Sarah. I'll have our lead architect take a look immediately. Does this include the load balancing protocols?</p>
+</div>
+</div>
+</div>
+<!-- Shared File Widget -->
+<div class="flex gap-3 max-w-2xl">
+<div class="size-8 rounded-full bg-slate-200 shrink-0 mt-1" data-alt="EcoGrid Contact Avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCE5vsTMcjTYwfNb_nOO-RtbN2GjFK8nTrdLHIokFPT7sUgzzbk3ZPBUDJAqlviOXTuape7ntqtrehoW_XwKUs_tO9KUQbfPm68ZaEmsMHw0E-OhkA79ku49BVvlAXZOPJYnuoKBnYDYgLVL4pxRAO2o2I5MosonbYy9nMBrQ6hnJX3ZHg1luOwP9nYZpp9jAOq1Z7Wc9RHvFCOhhnf5BWnYrTRkx3rcFJQ5Ewwa24krOYz7YqyHOtFGwXIZ02IPiZQvitLTo4gNE');"></div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold">Sarah Jenkins</span>
+<span class="text-[10px] text-slate-400">10:46 AM</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-1 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700 w-72 overflow-hidden">
+<div class="p-3 flex items-center gap-3">
+<div class="size-10 bg-red-50 dark:bg-red-900/20 text-red-600 rounded flex items-center justify-center">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">SmartGrid_API_Specs_v2.pdf</p>
+<p class="text-[10px] text-slate-400">4.2 MB â€¢ PDF Document</p>
+</div>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-1.5 hover:bg-slate-100 rounded">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-3 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700 mt-2">
+<p class="text-sm leading-relaxed">Yes, page 14-18 covers the protocols.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<footer class="p-6 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-4xl mx-auto relative flex items-end gap-3 bg-surface dark:bg-slate-800 p-2 rounded-xl border border-slate-200 dark:border-slate-700">
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea id="chat-input" class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2 resize-none max-h-32 custom-scrollbar" placeholder="Type a message..." rows="1"></textarea>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+<button onclick="sendMessage()" class="size-10 bg-primary text-white rounded-lg flex items-center justify-center hover:bg-primary/90 shadow-md">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Context Sidebar: Files & Info -->
+<aside class="w-72 border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark hidden xl:flex flex-col">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 text-center">
+<div class="size-20 rounded-2xl bg-surface dark:bg-slate-800 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+<img alt="EcoGrid Logo" data-alt="EcoGrid Solutions High Res Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjw6YSI_hH_XhdgmZB1sGTJ2ejFa8tUbeHqz3nkhQ7uR5CNCNQiwCnWbwSnuJ_-8EGRtcm-djYDmGBEdeubgYyt0d6RFxY7uspE0QTCjavPUmnzFm3GoKZvmLSOWOBrOlDSoK-WoL0RAdqqokPmiUo_FcLRX2-w2IAVDs2iajqCKhv6LYaVdWZ1caJAGDYXRtRLPgCaNpwIGF5kdBjk-62bPop21sAioqUBYhFuB6BIYZ7l2hA8M0kMxURV_Ntn1fFNmBIors9ctg"/>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">EcoGrid Solutions</h4>
+<p class="text-xs text-secondary mt-1">Smart Infrastructure &amp; IoT</p>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-6">
+<div class="mb-8">
+<h5 class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-4">Shared Documents</h5>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="size-8 rounded bg-red-50 text-red-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-medium truncate group-hover:text-primary transition-colors">Project_Timeline_Q3.pdf</p>
+<p class="text-[10px] text-slate-400">Shared Oct 12</p>
+</div>
+</div>
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="size-8 rounded bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-medium truncate group-hover:text-primary transition-colors">API_Specs_Draft.docx</p>
+<p class="text-[10px] text-slate-400">Shared Oct 10</p>
+</div>
+</div>
+</div>
+<button type="button" onclick="alert('Funcionalidad prÃ³ximamente disponible')"  class="w-full mt-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-secondary hover:bg-slate-50">View All Files</button>
+</div>
+<div>
+<h5 class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-4">Participants</h5>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-slate-200" data-alt="User Avatar Sarah" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4ppfbn1PAWpVsQ59I1fxr8YdjcZ9Xu4-nUE5GCkjgkhwBcQarX4bS8b90xvHA2Heg5yyv3zdNtYhRdJXf3UhinrH9HkS_WJzx2YaMjWT3z8G80AjZQ_LKGBLe9OaRNkVkW3cesMpYBUKjUavZ52F9y1K1m95LOp1i5JJxYTVSxVX1K7OSDqRHJRJkHf-9mtVNe07MZF-ris8tTQNLPMovjOWJ2O2-24WVFbp7DBKpYAC_cR2OeLV0AQcTVTotYJkJFuFvNWVSzVI');"></div>
+<span class="text-xs">Sarah Jenkins (EcoGrid)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center text-white text-[8px] font-bold">AR</div>
+<span class="text-xs">Alex Rivera (Casotic)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-primary/5 rounded-xl p-4">
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Security Note</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">This workspace is protected by Casotic Enterprise-Grade encryption. All documents shared are traceable.</p>
+</div>
+</div>
+</aside>
+</div>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        Auth.requireAuth();
+        loadMessages();
+    });
+
+    function loadMessages() {
+        const msgs = DB.getTable('messages');
+        const container = document.getElementById('chat-messages');
+        // Mantener el contenido estÃ¡tico existente, solo aÃ±adimos los nuevos al final
+        msgs.forEach(msg => {
+            const user = Auth.getUser();
+            const isMe = msg.userId === user.id;
+            
+            const msgHtml = isMe ? `
+            <div class="flex gap-3 max-w-2xl self-end flex-row-reverse">
+                <div class="size-8 rounded-full bg-primary shrink-0 mt-1 flex items-center justify-center text-white text-[10px] font-bold">${user.name.substring(0,2).toUpperCase()}</div>
+                <div class="flex flex-col gap-1 items-end">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] text-slate-400">Ahora</span>
+                        <span class="text-xs font-bold">${user.name} (Me)</span>
+                    </div>
+                    <div class="bg-primary text-white p-3 rounded-xl rounded-tr-none shadow-sm">
+                        <p class="text-sm leading-relaxed">${msg.text}</p>
+                    </div>
+                </div>
+            </div>
+            ` : `
+            <div class="flex gap-3 max-w-2xl">
+                <div class="size-8 rounded-full bg-slate-200 shrink-0 mt-1"></div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold">Partner</span>
+                        <span class="text-[10px] text-slate-400">Ahora</span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-3 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700">
+                        <p class="text-sm leading-relaxed">${msg.text}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+            container.innerHTML += msgHtml;
+        });
+        container.scrollTop = container.scrollHeight;
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const text = input.value.trim();
+        if (!text) return;
+        
+        const user = Auth.getUser();
+        DB.insert('messages', { userId: user.id, text, timestamp: Date.now() });
+        
+        input.value = '';
+        const container = document.getElementById('chat-messages');
+        // Append solo el nuevo
+        container.innerHTML += `
+        <div class="flex gap-3 max-w-2xl self-end flex-row-reverse">
+            <div class="size-8 rounded-full bg-primary shrink-0 mt-1 flex items-center justify-center text-white text-[10px] font-bold">${user.name.substring(0,2).toUpperCase()}</div>
+            <div class="flex flex-col gap-1 items-end">
+                <div class="flex items-center gap-2">
+                    <span class="text-[10px] text-slate-400">Ahora</span>
+                    <span class="text-xs font-bold">${user.name} (Me)</span>
+                </div>
+                <div class="bg-primary text-white p-3 rounded-xl rounded-tr-none shadow-sm">
+                    <p class="text-sm leading-relaxed">${text}</p>
+                </div>
+            </div>
+        </div>
+        `;
+        container.scrollTop = container.scrollHeight;
+    }
+</script>
+</body></html>
+
+
+
