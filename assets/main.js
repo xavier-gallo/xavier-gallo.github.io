@@ -28,7 +28,7 @@ const PROJECTS = [
     ],
     note: "The socket version keeps its data in memory only; there is no database.",
     stack: ["Java", "Sockets", "Threads", "Object serialization", "Java RMI", "Eclipse"],
-    repo: null,   // cuando exista el repo en GitHub, pon "distributed-apps-java"
+    repo: "distributed-apps-java",
     demo: false
   },
   {
@@ -41,7 +41,7 @@ const PROJECTS = [
     ],
     note: "Not packaged with Maven or Gradle yet; the required libraries are listed in the repository instead of being committed.",
     stack: ["Java", "Servlets", "JSP", "Jersey (JAX-RS)", "JSON-B", "Eclipse"],
-    repo: null,   // cuando exista el repo en GitHub, pon "java-university-web"
+    repo: "java-university-web",
     demo: false
   },
   {
@@ -55,7 +55,7 @@ const PROJECTS = [
     ],
     note: "Learning project, not safe to deploy as it is: passwords are stored as plain text, database credentials and the admin login are hard-coded, and some SQL queries concatenate request parameters (SQL injection risk).",
     stack: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    repo: null,   // cuando exista el repo en GitHub, pon "f1-merch-store"
+    repo: "f1-merch-store",
     demo: false
   },
   {
@@ -69,7 +69,7 @@ const PROJECTS = [
     ],
     note: "The notebook reads its dataset from Google Drive, so it cannot be re-run without that data.",
     stack: ["Python", "TensorFlow/Keras", "EfficientNetV2B1", "scikit-learn", "NumPy", "Matplotlib"],
-    repo: null,   // cuando exista el repo en GitHub, pon "colon-tissue-classifier"
+    repo: "colon-tissue-classifier",
     demo: false
   }
 ];
@@ -79,22 +79,30 @@ const MORE = [
   {
     name: "Casotic marketplace prototype",
     summary: "Marketplace prototype for technology companies, startups and investors, with role-based access, an admin panel and a Spanish/English switch, for the IT Project Management course. Front-end only: data lives in LocalStorage and login is simulated.",
+    role: "I led the project team, coordinating the work from planning through the final prototype.",
     stack: ["HTML", "Tailwind CSS", "JavaScript"],
-    repo: null,   // cuando exista el repo en GitHub, pon "casotic"
+    repo: "casotic",
     demo: false
   },
   {
     name: "PC component configurator",
     summary: "Windows Forms application to choose PC components from a SQL Server database, with separate user and admin screens, for the Advanced Visual Programming course (team of three).",
     stack: ["C#", ".NET Framework 4.7.2", "Windows Forms", "SQL Server"],
-    repo: null,   // cuando exista el repo en GitHub, pon "pc-component-configurator"
+    repo: "pc-component-configurator",
     demo: false
   },
   {
     name: "Algorithms in C",
     summary: "Hash table, backtracking, sorting and searching assignments, each with a written report, for the Algorithmics course.",
     stack: ["C"],
-    repo: null,   // cuando exista el repo en GitHub, pon "algorithms-c"
+    repo: "algorithms-c",
+    demo: false
+  },
+  {
+    name: "Database management coursework",
+    summary: "SQL schema and database export scripts for an academic database management project.",
+    stack: ["Oracle SQL", "Oracle APEX"],
+    repo: "sgi-database-project",
     demo: false
   }
 ];
@@ -167,7 +175,9 @@ function renderProjects() {
 function renderMore() {
   const list = $("#more-list");
   MORE.forEach((p) => {
-    list.append(el("li", {}, el("strong", {}, p.name), `. ${p.summary} Built with ${p.stack.join(", ")}. `, repoLinks(p)));
+    list.append(el("li", {}, el("strong", {}, p.name), `. ${p.summary} `,
+      p.role ? `My contribution: ${p.role} ` : "",
+      `Built with ${p.stack.join(", ")}. `, repoLinks(p)));
   });
 }
 

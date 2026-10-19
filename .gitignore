@@ -10,3 +10,9 @@ Thumbs.db
 # Only needed if you add tooling later
 node_modules/
 *.log
+
+# Local, sanitized project publication staging
+/_publish_work/
+/_publish/
+/_verify/
+
